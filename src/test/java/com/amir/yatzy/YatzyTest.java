@@ -51,14 +51,14 @@ public class YatzyTest {
     }
 
     @Test
-    public void fives() {
+    public void testFives() {
         assertEquals(10, Yatzy.fives(new DicesScroll(4,4,4,5,5)));
         assertEquals(15, Yatzy.fives(new DicesScroll(4,4,5,5,5)));
         assertEquals(20, Yatzy.fives(new DicesScroll(4,5,5,5,5)));
     }
 
     @Test
-    public void sixes_test() {
+    public void testSixes() {
         assertEquals(0, Yatzy.sixes(new DicesScroll(4,4,4,5,5)));
         assertEquals(6, Yatzy.sixes(new DicesScroll(4,4,6,5,5)));
         assertEquals(18, Yatzy.sixes(new DicesScroll(6,5,6,6,5)));
@@ -94,21 +94,21 @@ public class YatzyTest {
     }
 
     @Test
-    public void smallStraight() {
+    public void testSmallStraight() {
         assertEquals(15, Yatzy.smallStraight(new DicesScroll(1,2,3,4,5)));
         assertEquals(15, Yatzy.smallStraight(new DicesScroll(2,3,4,5,1)));
         assertEquals(0, Yatzy.smallStraight(new DicesScroll(1,2,2,4,5)));
     }
 
     @Test
-    public void largeStraight() {
+    public void testLargeStraight() {
         assertEquals(20, Yatzy.largeStraight(new DicesScroll(6,2,3,4,5)));
         assertEquals(20, Yatzy.largeStraight(new DicesScroll(2,3,4,5,6)));
         assertEquals(0, Yatzy.largeStraight(new DicesScroll(1,2,2,4,5)));
     }
 
     @Test
-    public void fullHouse() {
+    public void testFullHouse() {
         assertEquals(18, Yatzy.fullHouse(new DicesScroll(6,2,2,2,6)));
         assertEquals(0, Yatzy.fullHouse(new DicesScroll(2,3,4,5,6)));
     }
